@@ -1,0 +1,196 @@
+{
+  // ------------------- Editor Configuration ------------------- //
+  "editor.fontSize": 20,
+  "editor.fontFamily": "Fira Code Script",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.autoIndentOnPaste": true,
+  "editor.overtypeCursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "phase",
+  "editor.smoothScrolling": true,
+  "editor.inertialScroll": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.aiStats.enabled": true,
+  "editor.mouseWheelScrollSensitivity": 0.3,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.multiCursorPaste": "full",
+  "editor.padding.top": 4,
+  "editor.fontVariations": true,
+  "editor.allowVariableFontsInAccessibilityMode": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "storage.modifier", //static keyword
+          "storage.type", //class keyword
+          "support.class.builtin",
+          "keyword.control",
+          "constant.language",
+          "entity.other.attribute-name",
+          "entity.name.method"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  // ------------------- Tree Sitter Experimental ------------------- //
+  "editor.experimental.preferTreeSitter.css": true,
+  "editor.experimental.preferTreeSitter.ini": true,
+  "editor.experimental.preferTreeSitter.regex": true,
+  "editor.experimental.preferTreeSitter.typescript": true,
+  "editor.experimental.treeSitterTelemetry": true,
+
+  // ------------------- Terminal Configuration ------------------- //
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+  "terminal.integrated.cursorStyleInactive": "block",
+  "terminal.integrated.inheritEnv": false,
+
+  // ------------------- Workbench & UI ------------------- //
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.sideBar.location": "right",
+  "workbench.layoutControl.enabled": false,
+  "workbench.panel.opensMaximized": "always",
+  "workbench.editor.showTabs": "none",
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 12,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.tabActionUnpinVisibility": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.list.mouseWheelScrollSensitivity": 0.5,
+  "workbench.editor.editorActionsLocation": "hidden",
+
+  "catppuccin-icons.hidesExplorerArrows": true,
+  "window.commandCenter": false,
+  "window.newWindowDimensions": "default",
+  "window.customTitleBarVisibility": "never",
+  "window.menuBarVisibility": "compact",
+
+  // ------------------- Zen Mode ------------------- //
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.showTabs": "single",
+
+  // ------------------- Explorer & Navigation ------------------- //
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+
+  // ------------------- Search & Notebook ------------------- //
+  "search.showLineNumbers": true,
+  "notebook.lineNumbers": "on",
+
+  // ------------------- Terminal ------------------- //
+  "terminal.integrated.smoothScrolling": true,
+
+  // ------------------- GitHub Copilot & Chat ------------------- //
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.commandCenter.enabled": false,
+
+  // ------------------- Language Tools ------------------- //
+  "makefile.configureOnOpen": true,
+  "go.toolsManagement.autoUpdate": true,
+  "markdown.preview.breaks": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "svelte.enable-ts-plugin": true,
+  "dart.flutterSdkPath": "/home/inadio/.flutter/flutter",
+
+  // ------------------- Git ------------------- //
+  "git.autofetch": true,
+  "git.ignoreRebaseWarning": true,
+
+  // ------------------- Debug ------------------- //
+  "debug.terminal.clearBeforeReusing": true,
+
+  // ------------------- Remote Development ------------------- //
+  "remote.portsAttributes": {
+    "5173": {
+      "protocol": "http"
+    }
+  },
+
+  // ------------------- Theme Extensions ------------------- //
+  "catppuccin.bracketMode": "neovim",
+
+  // ------------------- ESLint ------------------- //
+  "eslint.debug": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+
+  // ------------------- MCP ------------------- //
+  "chat.mcp.gallery.enabled": true,
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "~/repos/instructions": true,
+    "~/works/vscode-instructions": true
+  },
+
+  // ------------------- Language-Specific Formatters ------------------- //
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+
+  // ------------------- Python Notebooks ------------------- //
+  "notebook.cellFocusIndicator": "border",
+  "notebook.defaultFormatter": "ms-python.python",
+  "notebook.cellExecutionTimeVerbosity": "verbose"
+}
