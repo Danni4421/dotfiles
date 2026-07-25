@@ -9,8 +9,8 @@ This repository is focused exclusively on the following development tools:
 - **Neovim** with [NvChad](https://nvchad.com/) configuration under `~/.config/nvim`
 - **Kitty** terminal emulator configuration under `~/.config/kitty`
 - **Zed** editor settings under `~/.config/zed`
-- **Claude** Desktop application configuration under `~/.config/Claude`
-- **Antigravity** configuration under `~/.config/antigravity`
+- **Claude Code** CLI configuration under `~/.config/claude`
+- **Antigravity CLI** configuration under `~/.config/antigravity`
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ dotfiles/
 │   │   ├── nvim/        # Neovim (NvChad)
 │   │   ├── kitty/       # Kitty
 │   │   ├── zed/         # Zed Editor
-│   │   ├── Claude/      # Claude Desktop
+│   │   ├── claude/      # Claude Code CLI
 │   │   └── antigravity/ # Antigravity CLI
 │   ├── dot_zsh/         # ~/.zsh/ contents
 │   └── dot_zshenv       # ~/.zshenv
