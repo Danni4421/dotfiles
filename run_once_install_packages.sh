@@ -31,4 +31,5 @@ install_package() {
 
 echo "Installing packages..."
 install_package kitty
+install_package neovim
 echo "Packages installed."

@@ -1,0 +1,8 @@
+{
+  "model": "gemini-3.5-flash",
+  "theme": "dark",
+  "ide": {
+    "vim_mode": false,
+    "font_size": 16
+  }
+}

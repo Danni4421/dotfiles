@@ -2,37 +2,15 @@
 
 A collection of configuration files and dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
-## Contents
+## Core Tools Configured
 
-### Hyprland Configuration (Ubuntu 24.04)
+This repository is focused exclusively on the following development tools:
 
-Pre-configured dotfiles optimized for Ubuntu 24.04 with Hyprland window manager, sourced from [JaKooLit/Ubuntu-Hyprland](https://github.com/JaKooLit/Ubuntu-Hyprland) and [JaKooLit/Hyprland-Dots](https://github.com/JaKooLit/Hyprland-Dots).
-
-**Included configurations:**
-- **ags** - A widget toolkit for Wayland
-- **btop** - Resource monitor with beautiful UI
-- **cava** - Audio visualizer
-- **fastfetch** - System information display
-- **ghostty** - Terminal emulator
-- **hypr** - Hyprland window manager configuration
-- **kitty** - GPU-based terminal emulator
-- **Kvantum** - Qt theme engine
-- **qt5ct/qt6ct** - Qt configuration tools
-- **quickshell** - Desktop shell for Wayland
-- **rofi** - Window switcher and app launcher
-- **swappy** - Screenshot annotator
-- **swaync** - Notification daemon
-- **wallust** - Wallpaper color palette generator
-- **waybar** - Status bar for Wayland
-- **wezterm** - GPU-based terminal
-- **wlogout** - Logout menu
-
-### Other Configurations
-
-- **zsh** - Z shell configuration
-- **VSCode** - Visual Studio Code settings
-- **Zed** - Zed editor settings
-- **.editorconfig** - Editor configuration
+- **Neovim** with [NvChad](https://nvchad.com/) configuration under `~/.config/nvim`
+- **Kitty** terminal emulator configuration under `~/.config/kitty`
+- **Zed** editor settings under `~/.config/zed`
+- **Claude** Desktop application configuration under `~/.config/Claude`
+- **Antigravity** configuration under `~/.config/antigravity`
 
 ## Prerequisites
 
@@ -52,10 +30,15 @@ Or if you already have chezmoi initialized:
 
 ```bash
 chezmoi pull
+```
+To preview the changes:
+```bash
+chezmoi diff
+```
+To apply:
+```bash
 chezmoi apply
 ```
-
-For more information on chezmoi, visit: https://www.chezmoi.io/
 
 ## Repository Structure
 
@@ -63,22 +46,16 @@ For more information on chezmoi, visit: https://www.chezmoi.io/
 dotfiles/
 ├── home/                 # Chezmoi root (maps to ~/.config, ~/, etc.)
 │   ├── dot_config/      # ~/.config/ contents
+│   │   ├── nvim/        # Neovim (NvChad)
+│   │   ├── kitty/       # Kitty
+│   │   ├── zed/         # Zed Editor
+│   │   ├── Claude/      # Claude Desktop
+│   │   └── antigravity/ # Antigravity CLI
 │   ├── dot_zsh/         # ~/.zsh/ contents
 │   └── dot_zshenv       # ~/.zshenv
 └── README.md
 ```
 
-## Notes
-
-- Files prefixed with `dot_` in the repository correspond to `.` in your home directory when applied by chezmoi
-- Use `chezmoi edit` to modify files while keeping them tracked
-- Run `chezmoi diff` to preview changes before applying
-
-## Sources
-
-- Hyprland Dots: https://github.com/JaKooLit/Hyprland-Dots/tree/Ubuntu-24.04-Dots
-- Ubuntu Hyprland Install: https://github.com/JaKooLit/Ubuntu-Hyprland/tree/24.04
-
 ## License
 
-See individual configuration repositories for their respective licenses.
+MIT
