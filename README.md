@@ -11,6 +11,7 @@ This repository is focused exclusively on the following development tools:
 - **Zed** editor settings under `~/.config/zed`
 - **Claude Code** CLI configuration under `~/.config/claude`
 - **Antigravity CLI** configuration under `~/.config/antigravity`
+- **Fontconfig** system font rendering configuration under `~/.config/fontconfig`
 
 ## Prerequisites
 
@@ -50,7 +51,8 @@ dotfiles/
 │   │   ├── kitty/       # Kitty
 │   │   ├── zed/         # Zed Editor
 │   │   ├── claude/      # Claude Code CLI
-│   │   └── antigravity/ # Antigravity CLI
+│   │   ├── antigravity/ # Antigravity CLI
+│   │   └── fontconfig/  # Fontconfig (JetBrains Mono)
 │   ├── dot_zsh/         # ~/.zsh/ contents
 │   └── dot_zshenv       # ~/.zshenv
 └── README.md
