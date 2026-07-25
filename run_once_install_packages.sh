@@ -12,24 +12,56 @@ detect_os() {
   fi
 }
 
-install_package() {
-  local pkg=$1
+install_packages() {
   local os=$(detect_os)
+  echo "Installing packages for OS: $os..."
 
   case $os in
     debian)
-      sudo apt install -y "$pkg"
+      sudo apt update
+      sudo apt install -y \
+        kitty \
+        neovim \
+        golang \
+        php-cli \
+        composer \
+        python3 \
+        python3-pip \
+        python3-venv \
+        build-essential \
+        curl \
+        git
       ;;
     arch)
-      sudo pacman -S --noconfirm "$pkg"
+      sudo pacman -Syu --noconfirm
+      sudo pacman -S --noconfirm \
+        kitty \
+        neovim \
+        go \
+        php \
+        composer \
+        python \
+        python-pip \
+        base-devel \
+        curl \
+        git
       ;;
     fedora)
-      sudo dnf install -y "$pkg"
+      sudo dnf install -y \
+        kitty \
+        neovim \
+        golang \
+        php-cli \
+        composer \
+        python3 \
+        python3-pip \
+        curl \
+        git
+      ;;
+    *)
+      echo "Unknown OS, please install packages manually."
       ;;
   esac
 }
 
-echo "Installing packages..."
-install_package kitty
-install_package neovim
-echo "Packages installed."
+install_packages

@@ -1,19 +1,40 @@
-# Node configs (nvm)
+# Javascript & Node.js (nvm, npm, pnpm, bun)
+
+# Node Version Manager (nvm)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# bun completions
-[ -s "/home/inadio/.bun/_bun" ] && source "/home/inadio/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# npm global binaries
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/inadio/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# Development Languages (Go, PHP/Composer, Python, Rust)
+
+# Go (Golang)
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
+# PHP / Composer
+export PATH="$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$PATH"
+
+# Python (User binaries e.g. pip, uv, poetry)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Rust (Cargo)
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+else
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
